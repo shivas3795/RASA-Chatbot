@@ -1,0 +1,94 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - bot_challenge
+  - bank_rate
+  - open_bank_account
+  - loan
+  - education_loan
+  - home_loan
+  - car_loan
+  - fd_open
+  - fd_close
+  - fd_rate
+  - debit_charges
+  - credit_charges
+  - forgot_netbanking_password
+  - forgot_netbanking_userID
+  - forgot_debit_password
+  - forgot_upi_password
+
+responses:
+  utter_greet:
+  - text: "Hi, how can I help you today?"
+
+  utter_did_that_help:
+  - text: "Happy to help :)"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye! Have a nice day"
+
+  utter_iamabot:
+  - text: "I am your personal assistant on xyz Bank's website to help you with your questions."
+  
+  utter_bank_rate:
+  - text: "Interest on Savings Account balance:\"4% p.a. above Rs. 1 lakh\"\"3.50% p.a. up to Rs. 1 lakh.\""
+  
+  utter_open_bank_account:
+  - text: "Thank you for your interest in opening a Savings Account with us. Please click [here](https://www.google.com) to apply"
+  
+  utter_loan:
+     - buttons: 
+          - payload: 
+            title: Home loan
+          - payload: 
+            title: Car loan
+          - payload: 
+            title: Education loan
+       text: "Please select the type of loan you need"
+  
+  utter_education_loan:
+  - text: "Please click [here](https://www.google.com) to know about Education loan."       
+  
+  utter_home_loan:
+  - text: "Please click [here](https://www.google.com) to know about home loan."
+  
+  utter_car_loan:
+  - text: "Please click [here](https://www.google.com) to know about car loan."
+  
+  utter_fd_open:
+  - text: "You can book a Fixed deposit by using our Mobile Banking app or [website](https://www.google.com)"
+  
+  utter_fd_close:
+  - text: "You may close a Fixed Deposit (FD) by using our Mobile Banking app or login to our website"
+
+  utter_fd_rate:
+  - text: "Please click [here](https://www.google.com) to view the detailed Interest Rate"
+  
+  utter_debit_charges:
+  - text: "New or replacement debit card fee is Rs. 200 Service Tax as applicable"
+  
+  utter_credit_charges:
+  - text: "Rs. 100 plus taxes will be applicable for credit card replacement"
+  
+  utter_forgot_netbanking_password:
+  - text: "To change your password log in to www.google.com and navigate to Overview > Personal Details > Click on Change Password" 
+  
+  utter_forgot_netbanking_userID:
+  - text: "If you forgot your userID log in to www.google.com and navigate to Overview > Personal Details > Click on forgot UserID" 
+
+  utter_forgot_debit_password:
+  - text: "You can regenerate/reset your debit card PIN through net banking or mobile app"
+  
+  utter_forgot_upi_password:
+  - text: " You can generate a new UPI PIN using your debit card details (the last six digits of your debit card and expiry date)"                             
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

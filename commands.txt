@@ -1,0 +1,36 @@
+Web implementation: rasa run -m models --enable-api --cors "*"
+
+voice implementation:
+main terminal - rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml
+new terminal - rasa run actions
+
+speech to text:
+pip install google-api-python-client
+pip install --upgrade pyaudio
+python speech_to_text.py
+pip install pyaudio
+pip --version
+pip install PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
+pip3 install --upgrade pip
+pip install --upgrade setuptools
+
+(working)
+(base) C:\Users\Shivam>pip3 install SpeechRecognition
+(base) C:\Users\Shivam>pip3 install pipwin
+(base) C:\Users\Shivam>pipwin install pyaudio
+
+create new environment (idle):
+check pip version: py -m pip --version
+add pip to env path: setx PATH "%PATH%;C:\Python34\Scripts"
+install virtual env: pip install virtualenv
+to check all envir: dir
+clear: cls
+where is python: where python
+activate new env: voice_bot_idle\Scripts\activate.bat
+create new env: python -m venv voice_bot
+
+API: AIzaSyBRzohlxjM8Ipu8LoO2VoZETSvpTiDapnU
+pip install uvicorn
+uvicorn app:app --reload --port 8000
+python -m http.server -h
+python -m http.server 8000
